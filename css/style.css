@@ -10,7 +10,26 @@
   --h1-h2-h3: Roboto Serif;
   --p-button: Roboto;
 }
+/* Grid Area */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80px auto auto 80px;
+  grid-template-areas:
+    "header-nav header-nav header-nav"
+    "banner . banner"
+    "card-container card-container card-container"
+    "footer footer footer footer";
+}
 /* Header and Navigation*/
 /* Banner */
 /* Card containers */
 /* Footer */
+footer {
+  background-color: var(--accent);
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Media Queries*/
