@@ -1,0 +1,16 @@
+:root {
+  /*Color Scheme*/
+  --background: #f5f3ef;
+  --card: #ffffff;
+  --accent: #febd2f;
+  --text-primary: #000000;
+  --text-secoundary: #646464;
+  --outline: #dcdcdc;
+  /*Fonts*/
+  --h1-h2-h3: Roboto Serif;
+  --p-button: Roboto;
+}
+/* Header and Navigation*/
+/* Banner */
+/* Card containers */
+/* Footer */
