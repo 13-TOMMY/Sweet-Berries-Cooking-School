@@ -6,27 +6,98 @@
   --text-primary: #000000;
   --text-secoundary: #646464;
   --outline: #dcdcdc;
+  /* Margins */
+  --padding-l-r: 0 80px 0 80px;
   /*Fonts*/
-  --h1-h2-h3: Roboto Serif;
-  --p-button: Roboto;
+  --h1-h2-h3: "Roboto Serif", sans-serif;
+  --p-button: "Roboto", sans-serif;
+}
+/*  General Styling CSS */
+
+li {
+  list-style: none;
+}
+/* H Style */
+h1,
+h2,
+h3 {
+  font-family: var(--h1-h2-h3);
+  color: var(--text-primary);
+}
+h1 {
+  font-weight: 500;
+  font-size: 64px;
+}
+h2 {
+  font-weight: 500;
+  font-size: 40px;
+}
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+/* P Style */
+p,
+button,
+a {
+  font-family: var(--p-button);
+}
+p {
+  color: var(--text-secoundary);
+  font-weight: 400;
+}
+button {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+a {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+/* Background Color */
+.header-nav,
+.banner,
+.card-container {
+  background-color: var(--background);
+}
+footer {
+  background-color: var(--accent);
 }
 /* Grid Area */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px auto auto 80px;
+  grid-template-rows: 80px 50vh 50vh 80px;
   grid-template-areas:
     "header-nav header-nav header-nav"
     "banner . banner"
     "card-container card-container card-container"
-    "footer footer footer footer";
+    "footer footer footer";
 }
 /* Header and Navigation*/
+.header-nav {
+  grid-area: header-nav;
+  padding: var(--padding-l-r);
+}
+
 /* Banner */
+.banner {
+  grid-area: banner;
+  padding: var(--padding-l-r);
+}
+.left-banner h1 {
+}
+.left-banner p {
+}
 /* Card containers */
+.card-container {
+  grid-area: card-container;
+  padding: var(--padding-l-r);
+}
 /* Footer */
 footer {
-  background-color: var(--accent);
   grid-area: footer;
   display: flex;
   align-items: center;
