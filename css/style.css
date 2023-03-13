@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 :root {
   /*Color Scheme*/
   --background: #f5f3ef;
@@ -95,6 +100,17 @@ footer {
 .card-container {
   grid-area: card-container;
   padding: var(--padding-l-r);
+}
+.card {
+  width: 400px;
+  height: 324px;
+}
+
+.first-card {
+  background-color: var(--accent);
+}
+.other-cards {
+  background-color: var(--card);
 }
 /* Footer */
 footer {
