@@ -34,6 +34,7 @@ li {
 .h2 {
   font-weight: 500;
   font-size: 40px;
+  line-height: 47px;
 }
 .h3 {
   font-weight: 600;
@@ -49,20 +50,18 @@ p {
   color: var(--text-secoundary);
   font-weight: 400;
 }
-button{
+button {
   color: var(--text-primary);
   font-weight: 500;
 }
-a{
+a {
   color: var(--text-primary);
   font-size: 16px;
   font-weight: 500;
   text-decoration: none;
 }
 /* Background Color */
-.header-nav,
-.banner,
-.card-container {
+html {
   background-color: var(--background);
 }
 footer {
@@ -71,7 +70,7 @@ footer {
 /* Grid Area */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3);
   grid-template-rows: 80px auto auto 80px;
   grid-template-areas:
     "header-nav header-nav header-nav"
@@ -86,35 +85,57 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 30px;
 }
 
 /* Banner */
 .banner {
   grid-area: banner;
   padding: var(--padding-l-r);
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 100px;
 }
 .left-banner h1 {
+  width: 600px;
+  height: 225px;
 }
 .left-banner p {
+  font-size: 24px;
+  line-height: 32px;
+  width: 550px;
+  height: 128px;
+}
+.right-banner img {
+  width: 600px;
+  height: 440px;
+  border-radius: 40px;
 }
 /* Card containers */
 .card-container {
   grid-area: card-container;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  align-self: center;
+  gap: 80px 40px;
   padding: 120px 80px 120px 80px;
 }
 .card {
   width: 400px;
   height: 324px;
   border-radius: 40px;
-  box-shadow: 5px 5px 20px lightgray;
+  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
 }
-
+.card button {
+  background-color: var(--card);
+  font-size: 18px;
+  padding: 10px 25px 10px 25px;
+  border-radius: 50px;
+  border: 1px solid var(--outline);
+}
 .first-card {
   background-color: var(--accent);
-  padding: 40px 40px 95px 40px;
+  padding: 40px 60px 95px 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -126,6 +147,14 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+}
+.other-cards p {
+  font-size: 20px;
+  line-height: 28px;
+}
+.other-cards .svg {
+  position: absolute;
+  transform: translate(235px, -80px);
 }
 /* Footer */
 .footer {
