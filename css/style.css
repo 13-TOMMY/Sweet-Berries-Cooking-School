@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 :root {
@@ -12,7 +10,7 @@
   --text-secoundary: #646464;
   --outline: #dcdcdc;
   /* Margins */
-  --padding-l-r: 0 80px 0 80px;
+  --padding-l-r: 0 5%;
   /*Fonts*/
   --h1-h2-h3: "Roboto Serif", sans-serif;
   --p-button: "Roboto", sans-serif;
@@ -23,21 +21,21 @@ li {
   list-style: none;
 }
 /* H Style */
-h1,
-h2,
-h3 {
+.h1,
+.h2,
+.h3 {
   font-family: var(--h1-h2-h3);
   color: var(--text-primary);
 }
-h1 {
+.h1 {
   font-weight: 500;
   font-size: 64px;
 }
-h2 {
+.h2 {
   font-weight: 500;
   font-size: 40px;
 }
-h3 {
+.h3 {
   font-weight: 600;
   font-size: 24px;
 }
@@ -51,11 +49,11 @@ p {
   color: var(--text-secoundary);
   font-weight: 400;
 }
-button {
+button{
   color: var(--text-primary);
   font-weight: 500;
 }
-a {
+a{
   color: var(--text-primary);
   font-size: 16px;
   font-weight: 500;
@@ -72,10 +70,9 @@ footer {
 }
 /* Grid Area */
 .grid-container {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px 50vh 50vh 80px;
+  grid-template-rows: 80px auto auto 80px;
   grid-template-areas:
     "header-nav header-nav header-nav"
     "banner . banner"
@@ -86,6 +83,9 @@ footer {
 .header-nav {
   grid-area: header-nav;
   padding: var(--padding-l-r);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Banner */
@@ -99,26 +99,44 @@ footer {
 }
 /* Card containers */
 .card-container {
-  
-  padding: var(--padding-l-r);
+  grid-area: card-container;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 120px 80px 120px 80px;
 }
 .card {
-  grid-area: card-container;
   width: 400px;
   height: 324px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 20px lightgray;
 }
 
 .first-card {
   background-color: var(--accent);
+  padding: 40px 40px 95px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .other-cards {
   background-color: var(--card);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 /* Footer */
-footer {
+.footer {
   grid-area: footer;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.logo-img-footer {
+  width: 130px;
+  height: 32px;
 }
 /*Media Queries*/
