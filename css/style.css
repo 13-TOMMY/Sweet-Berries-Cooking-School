@@ -72,6 +72,7 @@ footer {
 }
 /* Grid Area */
 .grid-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 80px 50vh 50vh 80px;
@@ -98,10 +99,11 @@ footer {
 }
 /* Card containers */
 .card-container {
-  grid-area: card-container;
+  
   padding: var(--padding-l-r);
 }
 .card {
+  grid-area: card-container;
   width: 400px;
   height: 324px;
 }
