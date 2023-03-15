@@ -12,7 +12,7 @@
   /* Margins */
   --padding-l-r: 0 5%;
   /*Fonts*/
-  --h1-h2-h3: "Roboto Serif", sans-serif;
+  --h1-h2-h3: "Roboto Serif", serif;
   --p-button: "Roboto", sans-serif;
 }
 /*  General Styling CSS */
@@ -76,8 +76,7 @@ footer {
     "header-nav header-nav header-nav"
     "banner . banner"
     "card-container card-container card-container"
-    "footer footer footer"
-    ;
+    "footer footer footer";
 }
 /* Header and Navigation*/
 .header-nav {
@@ -88,17 +87,18 @@ footer {
   justify-content: space-between;
   padding-top: 30px;
 }
-.header-nav :nth-child(1){
+.header-nav .links {
   padding-right: 50px;
 }
-.getStarted{
+.getStarted {
   background-color: var(--text-primary);
   color: var(--card);
-  width: 145px;
+  width: 135px;
   height: 48px;
   border: none;
   border-radius: 28px;
   font-size: 16px;
+  padding: 10px 25px 10px 25px;
 }
 
 /* Banner */
@@ -131,7 +131,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
-  gap: 80px 20px;
+  gap: 80px 40px;
   padding: 120px 80px 120px 80px;
 }
 .card {
@@ -140,7 +140,7 @@ footer {
   border-radius: 40px;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
 }
-.card :nth-child(4){
+.card :nth-child(4) {
   background-color: var(--card);
   font-size: 18px;
   padding: 10px 25px 10px 25px;
