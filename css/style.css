@@ -88,13 +88,25 @@ footer {
   justify-content: space-between;
   padding-top: 30px;
 }
+.header-nav :nth-child(1){
+  padding-right: 50px;
+}
+.getStarted{
+  background-color: var(--text-primary);
+  color: var(--card);
+  width: 145px;
+  height: 48px;
+  border: none;
+  border-radius: 28px;
+  font-size: 16px;
+}
 
 /* Banner */
 .banner {
   grid-area: banner;
   padding: var(--padding-l-r);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding-top: 100px;
 }
 .left-banner h1 {
@@ -117,8 +129,9 @@ footer {
   grid-area: card-container;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-self: center;
-  gap: 80px 40px;
+  justify-items: center;
+  align-items: center;
+  gap: 80px 20px;
   padding: 120px 80px 120px 80px;
 }
 .card {
@@ -127,7 +140,7 @@ footer {
   border-radius: 40px;
   box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.05);
 }
-.card button {
+.card :nth-child(4){
   background-color: var(--card);
   font-size: 18px;
   padding: 10px 25px 10px 25px;
