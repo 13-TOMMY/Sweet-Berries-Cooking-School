@@ -99,9 +99,23 @@ footer {
   font-size: 16px;
   padding: 10px 25px 10px 25px;
 }
+/* Dropdown menu */
+.dropDown{
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--text-primary);
+}
 
 /* Banner */
 .banner {
+  background-color: red;
   padding: var(--padding-l-r);
   display: flex;
   justify-content: space-between;
@@ -192,9 +206,9 @@ footer {
 /*Media Queries*/
 
 /*Tablet display*/
-/* @media (max-width:768px){
+@media (max-width:768px){
     .grid-container{
-      grid-template-rows: 80px 246px 360px auto 80px;
+      grid-template-rows: 80px 246px 360px 1057px 80px;
       grid-template-areas: 
       "header-nav header-nav"
       "text-banner text-banner"
@@ -215,10 +229,10 @@ footer {
     .card{
       width: 332px;
       height: 263px;
-  } */
+  }
 
 /*Phone display*/
-/* @media(max-width:468px){
+@media(max-width:468px){
   .grid-container{
     grid-template-rows: 80px 246px 360px auto 80px;
     grid-template-areas: 
@@ -246,4 +260,23 @@ footer {
   .card{
     width: 342px;
     height: hug;
-} */
+  }
+/* dropdown */
+  .dropDown {
+    display: block;
+    cursor: pointer;
+  }
+
+  .dropDown.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .dropDown.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .dropDown.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }}
