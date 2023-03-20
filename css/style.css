@@ -64,14 +64,15 @@ html {
 footer {
   background-color: var(--accent);
 }
+
 /* Grid Area */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px auto auto 80px;
+  grid-template-rows: 80px 600px 888px 80px;
   grid-template-areas:
     "header-nav header-nav header-nav"
-    "text-banner . img-banner"
+    "text-banner . img-banner "
     "card-container card-container card-container"
     "footer footer footer";
 }
@@ -87,6 +88,7 @@ footer {
 .header-nav .links {
   padding-right: 50px;
 }
+
 .getStarted {
   background-color: var(--text-primary);
   color: var(--card);
