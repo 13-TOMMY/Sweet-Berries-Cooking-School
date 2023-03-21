@@ -39,21 +39,22 @@ li {
   font-size: 24px;
 }
 /* P Style */
-p,
-button,
-a {
+.p,
+.button,
+.links,
+.banner-p {
   font-family: var(--p-button);
 }
-p {
+.p {
   color: var(--text-secoundary);
-  font-weight: 400;
+  font-weight: 300;
 }
-button {
+.button {
   color: var(--text-primary);
   font-weight: 500;
   cursor: pointer;
 }
-a {
+.a {
   color: var(--text-primary);
   font-size: 16px;
   font-weight: 500;
@@ -71,7 +72,7 @@ footer {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px 600px 888px 80px;
+  grid-template-rows: 80px 600px auto 80px;
   grid-template-areas:
     "header-nav header-nav header-nav"
     "text-banner . img-banner "
@@ -79,7 +80,7 @@ footer {
     "footer footer footer";
 }
 /* Header and Navigation*/
-nav{
+nav {
   grid-area: header-nav;
 }
 .header-nav {
@@ -96,7 +97,7 @@ nav{
 .getStarted {
   background-color: var(--text-primary);
   color: var(--card);
-  width: 135px;
+  width: fit-content;
   height: 48px;
   border: none;
   border-radius: 28px;
@@ -104,7 +105,7 @@ nav{
   padding: 10px 25px 10px 25px;
 }
 /* Dropdown menu */
-.dropDown{
+.dropDown {
   display: none;
 }
 .bar {
@@ -146,7 +147,7 @@ nav{
   justify-content: center;
   padding-top: 10%;
 }
-.right-banner img { 
+.right-banner img {
   width: auto;
   height: auto;
   border-radius: 40px;
@@ -216,56 +217,112 @@ nav{
 }
 /*Media Queries*/
 /* 1308px */
-@media (max-width:1308px){
+@media (max-width: 1308px) {
   .other-cards .svg {
     position: absolute;
     transform: translate(200px, -80px);
   }
 }
 
-/* 1218px */
-@media (max-width:1218px){
+/* 1260px */
+@media (max-width: 1260px) {
   .other-cards .svg {
     position: absolute;
     transform: translate(175px, -75px);
   }
+  .right-banner img {
+    width: 500px;
+    height: 350px;
+  }
+}
+/* 1140px */
+@media (max-width: 1140px) {
+  .other-cards .svg {
+    position: absolute;
+    transform: translate(130px, -75px);
+  }
+  .right-banner img {
+    width: 350px;
+    height: 250px;
+  }
+}
+/* 970 */
+@media (max-width: 970px) {
+  .grid-container {
+    grid-area: "header-nav header-nav header-nav" ". text-banner ."
+      "card-container card-container card-container" "footer footer footer";
+  }
+  .other-cards .svg {
+    display: none;
+  }
+  .right-banner img {
+    opacity: 0;
+  }
+  .card {
+    width: fit-content;
+    height: 400px;
+  }
+  .left-banner {
+    padding-left: 20%;
+  }
 }
 /*Tablet display*/
-@media (max-width:768px){
-    .grid-container{
-      grid-template-rows: 80px 246px 360px 1057px 80px;
-      grid-template-areas: 
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px auto auto auto 80px;
+    grid-template-areas:
       "header-nav header-nav"
       "text-banner text-banner"
       "img-banner img-banner"
       "card-container card-container"
       "footer footer";
-    }
-    .img-banner{
-      width: 80%;
-    }
-    .text-banner{
-      width: 80%;
-      margin-bottom: 40px;
-    }
-    .card-container{
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .card{
-      width: 332px;
-      height: 263px;
   }
-
+  .left-banner {
+    padding-left: 0%;
+    margin: 0%;
+    align-items: center;
+    justify-content: center;
+  }
+  .left-banner h1 {
+    text-align: center;
+    max-width: 100%;
+    max-height: fit-content;
+  }
+  .left-banner p {
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+  }
+  .right-banner {
+    opacity: 100;
+    /* width: 688px;
+      height: 360px; */
+  }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card {
+    width: 332px;
+    height: 263px;
+  }
+  .card-container {
+    padding: 80px 0;
+    gap: 20px 20px;
+    justify-content: center;
+  }
+}
 /*Phone display*/
-@media(max-width:468px){
-  .grid-container{
+@media (max-width: 468px) {
+  .grid-container {
+    grid-template-columns: 1fr;
     grid-template-rows: 80px 246px 360px auto 80px;
-    grid-template-areas: 
-    "header-nav"
-    "text-banner"
-    "img-banner"
-    "card-container"
-    "footer";
+    grid-template-areas:
+      "header-nav"
+      "text-banner"
+      "img-banner"
+      "card-container"
+      "footer";
   }
   .left-banner h1 {
     width: 342px;
@@ -279,15 +336,15 @@ nav{
     width: 342px;
     height: 220px;
   }
-  .card-container{
+  .card-container {
     grid-template-columns: 1fr;
   }
-  .card{
+  .card {
     width: 342px;
     height: hug;
   }
-}
-/* dropdown */
+
+  /* dropdown */
   .dropDown {
     display: block;
     cursor: pointer;
