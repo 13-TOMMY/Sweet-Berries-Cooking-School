@@ -96,6 +96,10 @@ nav {
 .first-link {
   padding-right: 30px;
 }
+.nav-logo{
+  width: 162.03px;
+  height: 40px; 
+}
 .getStarted {
   background-color: var(--text-primary);
   color: var(--card);
@@ -215,6 +219,7 @@ nav {
   justify-content: center;
 }
 .logo-img-footer {
+  
   width: 130px;
   height: 32px;
 }
@@ -245,8 +250,21 @@ nav {
     transform: translate(130px, -75px);
   }
   .right-banner img {
+    width: 350px;
+    height: 250px;
+  }
+  .left-banner{
     width: 100%;
-    height: 100%;
+  }
+  .left-banner h1{
+    width: 420px;
+    height: fit-content;
+    font-size: 50px;
+  }
+  .left-banner p{
+    width: 400px;
+    height: fit-content;
+    font-size: 22px;
   }
 }
 /* 970 */
@@ -263,6 +281,12 @@ nav {
     width: fit-content;
     height: 100%;
     width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .right-banner img {
+    width: 250px;
+    height: 200px;
   }
 }
 /*Tablet display*/
@@ -314,7 +338,8 @@ nav {
   }
   .card-container {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 0 80px 0;
+    justify-content: center;
+    padding: 0 5% 80px 5%;
     gap: 50px 20px;
     width: 100%;
   }
@@ -371,10 +396,15 @@ nav {
       "footer";
   }
   .header-nav .links {
-    display: none;
+    position: fixed;
+       left: -100%;
+       top: 80px;
   }
   .header-nav button {
     display: none;
+  }
+  .nav-logo{
+    padding-left: 7%;
   }
   .left-banner h1 {
     width: 70%;
@@ -399,6 +429,12 @@ nav {
     transform: translate(280px, -60px);
   }
   /* dropdown */
+  .header-nav .links.active{
+    left: 0;
+  }
+  .header-nav .links{
+    margin: 40px 0;
+  }
   .dropDown {
     display: block;
     cursor: pointer;
