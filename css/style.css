@@ -93,12 +93,16 @@ nav {
 .header-nav .links {
   width: 80px;
 }
+.links:hover {
+  cursor: pointer;
+  color: var(--accent);
+}
 .first-link {
   padding-right: 30px;
 }
-.nav-logo{
+.nav-logo {
   width: 162.03px;
-  height: 40px; 
+  height: 40px;
 }
 .getStarted {
   background-color: var(--text-primary);
@@ -109,6 +113,12 @@ nav {
   border-radius: 28px;
   font-size: 16px;
   padding: 10px 25px 10px 25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.getStarted:hover {
+  transform: translate(0, 2px);
+  color: var(--accent);
 }
 /* Dropdown menu */
 .dropDown {
@@ -139,12 +149,20 @@ nav {
 .left-banner h1 {
   max-width: auto;
   max-height: 225px;
+  transition: 0.5s;
+}
+.left-banner h1:hover {
+  transform: translate(10%, 0);
 }
 .left-banner p {
   font-size: 24px;
   line-height: 32px;
   width: 550px;
   height: 128px;
+  transition: 0.5s;
+}
+.left-banner p:hover {
+  transform: translate(10%, 0);
 }
 .right-banner {
   grid-area: img-banner;
@@ -180,6 +198,12 @@ nav {
   padding: 10px 25px 10px 25px;
   border-radius: 50px;
   border: 1px solid var(--outline);
+  transition: 0.5s;
+}
+.card button:hover {
+  cursor: pointer;
+  background-color: var(--text-primary);
+  color: var(--accent);
 }
 .first-card {
   background-color: var(--accent);
@@ -219,7 +243,6 @@ nav {
   justify-content: center;
 }
 .logo-img-footer {
-  
   width: 130px;
   height: 32px;
 }
@@ -253,15 +276,15 @@ nav {
     width: 350px;
     height: 250px;
   }
-  .left-banner{
+  .left-banner {
     width: 100%;
   }
-  .left-banner h1{
+  .left-banner h1 {
     width: 420px;
     height: fit-content;
     font-size: 50px;
   }
-  .left-banner p{
+  .left-banner p {
     width: 400px;
     height: fit-content;
     font-size: 22px;
@@ -307,6 +330,12 @@ nav {
     border-radius: 28px;
     font-size: 16px;
     padding: 10px 10px;
+  }
+  .left-banner h1:hover {
+    transform: translate(0, 0);
+  }
+  .left-banner p:hover {
+    transform: translate(0, 0);
   }
   .left-banner {
     margin-left: 0;
@@ -397,13 +426,13 @@ nav {
   }
   .header-nav .links {
     position: fixed;
-       left: -100%;
-       top: 80px;
+    left: -100%;
+    top: 80px;
   }
   .header-nav button {
     display: none;
   }
-  .nav-logo{
+  .nav-logo {
     padding-left: 7%;
   }
   .left-banner h1 {
@@ -418,7 +447,7 @@ nav {
   }
   .card-container {
     grid-template-columns: 1fr;
-    padding: 0 5%;
+    padding: 5% 5%;
   }
   .card {
     height: 100%;
@@ -429,10 +458,10 @@ nav {
     transform: translate(280px, -60px);
   }
   /* dropdown */
-  .header-nav .links.active{
+  .header-nav .links.active {
     left: 0;
   }
-  .header-nav .links{
+  .header-nav .links {
     margin: 40px 0;
   }
   .dropDown {
