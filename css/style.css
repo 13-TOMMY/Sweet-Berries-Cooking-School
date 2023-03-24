@@ -130,7 +130,6 @@ nav {
   height: 3px;
   margin: 5px auto;
   border-radius: 40%;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: var(--text-primary);
 }
@@ -416,7 +415,7 @@ nav {
 @media (max-width: 500px) {
   .grid-container {
     grid-template-columns: 1fr;
-    grid-template-rows: 80px auto auto auto 80px;
+    grid-template-rows: auto auto auto auto 80px;
     grid-template-areas:
       "header-nav"
       "text-banner"
@@ -426,8 +425,16 @@ nav {
   }
   .header-nav .links {
     position: fixed;
-    left: -100%;
-    top: 80px;
+        left: -100%;
+        top: 100px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
   }
   .header-nav button {
     display: none;
@@ -459,7 +466,7 @@ nav {
   }
   /* dropdown */
   .header-nav .links.active {
-    left: 0;
+    left: 100;
   }
   .header-nav .links {
     margin: 40px 0;
@@ -474,12 +481,10 @@ nav {
   }
 
   .dropDown.active .bar:nth-child(1) {
-    -webkit-transform: translateY(8px) rotate(45deg);
     transform: translateY(8px) rotate(45deg);
   }
 
   .dropDown.active .bar:nth-child(3) {
-    -webkit-transform: translateY(-8px) rotate(-45deg);
     transform: translateY(-8px) rotate(-45deg);
   }
 }
