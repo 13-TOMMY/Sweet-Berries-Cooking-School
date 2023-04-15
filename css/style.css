@@ -1,3 +1,6 @@
+/* Did not pass the HTML validator and did not pass the CSS validator. */
+
+/* Awesome work on using CSS variables! */
 :root {
   /*Color Scheme*/
   --background: #f5f3ef;
@@ -11,6 +14,7 @@
   --margin-l: 10%;
   --margin-r: 20%;
   /*Fonts*/
+  /* Great work on being detailed oriented and adding the right fonts to each component of the website. */
   --h1-h2-h3: "Roboto Serif", serif;
   --p-button: "Roboto", sans-serif;
 }
@@ -69,6 +73,7 @@ footer {
 }
 
 /* Grid Area */
+/* Superb! You’ve used grid template areas correctly! */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -83,6 +88,8 @@ footer {
 nav {
   grid-area: header-nav;
 }
+/* Beautiful work on using CSS Grid and flex box together! */
+/* Nice work on using Flexbox properly to create some of the components. */
 .header-nav {
   padding: var(--padding-l-r);
   display: flex;
@@ -229,6 +236,8 @@ nav {
   font-size: 20px;
   line-height: 28px;
 }
+/* Even-though it looks like you achieved placing the logo above the card, it is not the proper way. You should give the icon a position of absolute, this will bring the icon out of the document flow.
+Then you need to give the card a position of relative in order for the icon to be placed in relative to the card. */
 .other-cards .svg {
   position: absolute;
   transform: translate(230px, -75px);
@@ -256,6 +265,9 @@ nav {
 
 /* 1260px */
 @media (max-width: 1260px) {
+  /* You’ve changed the width and height of the image in the banner within your media queries.
+However, there’s a better way to make it responsive and that’s to make the width 100%. This will make it 100% of it’s parent and it will be responsive based on the screen size.
+There’s also no need to set a height on the image, it will just stretch the image. */
   .other-cards .svg {
     position: absolute;
     transform: translate(175px, -75px);
@@ -412,6 +424,7 @@ nav {
   }
 }
 /*Phone display*/
+/* Great work on making your project responsive using media queries properly! */
 @media (max-width: 500px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -435,6 +448,9 @@ nav {
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
+  /* Good job on hiding the regular navbar and showing the hamburger icon on smaller screen sizes.
+
+The hamburger menu is not functional. */
   .header-nav button {
     display: none;
   }
